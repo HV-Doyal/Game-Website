@@ -1,0 +1,467 @@
+/* Define a custom font called 'Crang' */
+@font-face {
+  font-family: 'Crang';
+  src: url('Crang.ttf') format('truetype');
+}
+
+/* Importing a font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+/* Styling for the entire HTML and body elements */
+html, body {
+  background-color: #64b4d6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #000000bc;
+  color: white;
+}
+
+/* Styling for the body */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Footer styling */
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: auto;
+  height: 200px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the logo image */
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+/* Styling for the logo and h1 (heading) elements */
+.logo, h1 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -30px;
+  transform: scale(0.8);
+}
+
+/* Styling for the h1 (heading) with custom font 'Crang' */
+h1 {
+  font-family: "Crang", sans-serif;
+}
+
+/* Body text font family */
+body {
+  font-family: 'Crang', sans-serif;
+}
+
+/* Apply box-sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Styling for the "Login" button */
+.open-button {
+  background-color: #00000000;
+  color: white;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 20%;
+  font-size: 2.125rem;
+}
+
+/* Styling for the login popup form */
+.login-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgb(23, 132, 110);
+  z-index: 990;
+}
+
+/* Styling for the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: rgb(23, 132, 110);
+}
+
+/* Styling for full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Styling for input fields when focused */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Styling for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Styling for the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Hover effect for buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+/* Styling for the "Sign Up" button */
+.open-button-register {
+  background-color: #00000000;
+  color: white;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 3%;
+  font-size: 2.125rem;
+}
+
+/* Styling for the sign-up popup form */
+.signup-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgb(23, 132, 110);
+  z-index: 990;
+}
+
+/* Styling for the "Leaderboards" button */
+.open-button-leaderboards {
+  background-color: #00000000;
+  color: white;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 3%;
+  font-size: 2.125rem;
+}
+
+/* Resetting margins and paddings for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting the font family for the entire body */
+body {
+  font-family: 'Exo', sans-serif;
+}
+
+/* Styling for the context section */
+.context {
+  width: 100%;
+  position: absolute;
+  top: 50vh; /* Vertically center the context section on the viewport */
+}
+
+/* Styling for the background area */
+.area {
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh; /* Fills the entire viewport height */
+  position: relative;
+}
+
+/* Styling for the animated circles */
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Styling for individual circle elements */
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite; /* Apply animation to the circles */
+  bottom: -150px; /* Initially position the circles below the viewport */
+}
+
+/* Styling for the first circle */
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s; /* Delay the animation for this circle */
+}
+
+/* Styling for the second circle */
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s; /* Adjust animation duration */
+}
+
+/* Styling for the third circle */
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+/* Styling for the fourth circle */
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+/* Styling for the fifth circle */
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+/* Styling for the sixth circle */
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+/* Styling for the seventh circle */
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+/* Styling for the eighth circle */
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s; /* Adjust animation duration */
+}
+
+/* Styling for the ninth circle */
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s; /* Adjust animation duration */
+}
+
+/* Styling for the tenth circle */
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s; /* Adjust animation duration */
+}
+/* Keyframes animation for the 'animate' animation */
+@keyframes animate {
+  0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+/* Styling for the "Play" button */
+.start-btn {
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 20px; /* Increase padding to make the button bigger */
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 .2em gray;
+  cursor: pointer;
+  position: absolute; /* Position the button */
+  top: 90%; /* Center vertically at 50% from the top */
+  left: 50%; /* Center horizontally at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the button precisely */
+  z-index: 900; /* Set a high z-index to make it the top layer */
+  transition: box-shadow 0.3s; /* Add a smooth transition for the box shadow */
+}
+
+/* Styling for the active state of the "Play" button */
+.start-btn:active {
+  box-shadow: none;
+  position: absolute;
+  top: .2em;
+  top: 90%; /* Center vertically at 50% from the top */
+  left: 50%; /* Center horizontally at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the button precisely */
+  transition: box-shadow 0.3s; /* Add a smooth transition for the box shadow */
+}
+
+/* Styling for the context section */
+.context {
+  width: 100%;
+  position: absolute;
+  top: 25vh; /* Vertically position it at 25% from the top of the viewport */
+  z-index: 900; /* Set a high z-index to make it the top layer */
+}
+
+/* Styling for the context section's heading */
+.context h5 {
+  text-align: center;
+  color: #000000;
+  font-size: 50px;
+}
+
+/* Styling for the footer logo */
+.logo-footer {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin-left: -120px;
+  margin-right: 10px;
+  margin-bottom: 90px;
+}
+
+/* Styling for the footer name */
+.footer-name {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 90px;
+}
+
+/* Styling for the "Login" button in the footer */
+.open-button-footer {
+  background-color: #00000000;
+  color: white;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  margin-left: -23%;
+  margin-bottom: -30px;
+  font-size: 0.8rem;
+}
+
+/* Styling for the "Leaderboards" button in the footer */
+.open-button-leaderboards-footer {
+  background-color: #00000000;
+  color: white;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  margin-bottom: -30px;
+  margin-left: 2%;
+  font-size: 0.8rem;
+}
+
+/* Styling for the "Sign Up" button in the footer */
+.open-button-register-footer {
+  background-color: #00000000;
+  color: white;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  margin-bottom: -30px;
+  margin-left: 2%;
+  font-size: 0.8rem;
+}
+
+/* Styling for social media icons in the footer */
+.yt-image {
+  width: 20px;
+  height: auto;
+  display: block;
+  margin-right: 10px;
+  margin-bottom: -100px;
+}
+
+.fb-image {
+  width: 20px;
+  height: auto;
+  display: block;
+  margin-right: 15px;
+  margin-bottom: -100px;
+}
+
+.insta-image {
+  width: 20px;
+  height: auto;
+  display: block;
+  margin-left: -15%;
+  margin-right: 10px;
+  margin-bottom: -100px;
+}
+
+/* Styling for the container of social media icons in the footer */
+.image-container {
+  display: flex;
+  margin-left: -13%;
+}
+
+/* Styling for individual social media icons in the footer */
+.image-container a {
+  margin-top: 70px;
+  margin-left: -5px;
+}
+.start-btn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

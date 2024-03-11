@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sky Sentinel</title>
+    <!-- Favicon for the website -->
+    <link rel="icon" type="image/x-icon" href="../Asset\pictures\logo.png">
+    <!-- External CSS file for styling -->
+    <link rel="stylesheet" href="../CSS/leaderboards_Design.css">
+    <!-- Define a custom font called 'Crang' -->
+    <style>
+        @font-face {
+            font-family: 'Crang';
+            src: url('../Asset/font/Crang.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Logo -->
+        <img src="../Asset\pictures\logo.png" alt="Logo" class="logo">
+        <h1>Sky Sentinel</h1>
+        <!-- Login button -->
+        <button class="open-button" onclick="openLoginForm()" style="font-family: 'Crang', sans-serif;">Login</button>
+        <!-- Sign Up button -->
+        <button class="open-button-register" onclick="openSignUpForm()" style="font-family: 'Crang', sans-serif;">Sign Up</button>
+        <!-- Leaderboards link -->
+        <a href="../Index.html" class="open-button-leaderboards" style="font-family: 'Crang', sans-serif; text-decoration: none;">Home</a>
+    </header>
+
+    <!-- Login Popup -->
+    <div class="login-popup" id="login">
+        <form action="/action_page.php" class="form-container">
+            <div style="text-align: center;">
+                <h1>Login</h1>
+            </div>
+            <div>
+                <label for="email"><b>Email</b></label>
+            </div>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+        </form>
+    </div>
+
+    <!-- Sign Up Popup -->
+    <div class="signup-popup" id="signup">
+        <form action="/action_page.php" class="form-container">
+            <div style="text-align: center;">
+                <h1>Sign Up</h1>
+            </div>
+            <div>
+                <label for="name"><b>Name</b></label>
+            </div>
+            <input type="text" placeholder="Enter full Name" name="name" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="btn">Sign Up</button>
+            <button type="button" class="btn cancel" onclick="closeSignUpForm()">Close</button>
+        </form>
+    </div>
+
+    <!-- JavaScript functions for opening and closing the login and sign-up popups -->
+    <script>
+        function openLoginForm() {
+            document.getElementById("login").style.display = "block";
+        }
+
+        function closeLoginForm() {
+            document.getElementById("login").style.display = "none";
+        }
+
+        function openSignUpForm() {
+            document.getElementById("signup").style.display = "block";
+        }
+
+        function closeSignUpForm() {
+            document.getElementById("signup").style.display = "none";
+        }
+    </script>
+
+    <!-- Start of a container div with the class "context" -->
+<div class="context">
+    <!-- Start of a container div with the class "container-table" and a top offset of -2px -->
+    <div class="container-table" style="top: -2px;">
+        <!-- Start of a table element -->
+        <table>
+            <!-- Table header section -->
+            <thead>
+                <!-- Table header row -->
+                <tr>
+                    <!-- Table header cells -->
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <!-- Table body section -->
+            <tbody>
+                <!-- Table data rows -->
+                <tr>
+                    <!-- Table data cells -->
+                    <td>1</td>
+                    <td>Player 1</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Player 2</td>
+                    <td>950</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Player 3</td>
+                    <td>900</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Player 4</td>
+                    <td>850</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Player 5</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Player 6</td>
+                    <td>750</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Player 7</td>
+                    <td>700</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Player 8</td>
+                    <td>650</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Player 9</td>
+                    <td>600</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- End of the table element -->
+    </div>
+    <!-- End of the container div with the class "container-table" -->
+</div>
+<!-- End of the container div with the class "context" -->
+
+
+    <!-- Background circles for design -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Logo in the footer -->
+        <img src="../Asset\pictures\logo.png" alt="Logo" class="logo-footer">
+        <h1 class="footer-name">Sky Sentinel</h1>
+        <!-- Login button in the footer -->
+        <button class="open-button-footer" onclick="openLoginForm()" style="font-family: 'Crang', sans-serif;">Login</button>
+        <!-- Sign Up button in the footer -->
+        <button class="open-button-register-footer" onclick="openSignUpForm()" style="font-family: 'Crang', sans-serif;">Sign Up</button>
+        <!-- Leaderboards link in the footer -->
+        <a href="../Index.html" class="open-button-leaderboards-footer" style="font-family: 'Crang', sans-serif; text-decoration: none;">Home</a>
+
+        <!-- Social media icons in the footer -->
+        <div class="image-container">
+            <a href="https://www.instagram.com">
+                <img src="../Asset\pictures\insta.png" alt="Instagram" class="insta-image">
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="../Asset\pictures\Fb.png" alt="Facebook" class="fb-image">
+            </a>
+            <a href="https://www.youtube.com">
+                <img src="../Asset\pictures\YT.png" alt="Youtube" class="yt-image">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

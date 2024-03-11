@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sky Sentinel</title>
+    <!-- Favicon for the website -->
+    <link rel="icon" type="image/x-icon" href="Asset\pictures\logo.png">
+    <!-- External CSS file for styling -->
+    <link rel="stylesheet" href="CSS\Home_Page_Design.css">
+    <!-- Define a custom font called 'Crang' -->
+    <style>
+        @font-face {
+            font-family: 'Crang';
+            src: url("Asset/font/Crang.ttf") format('truetype');
+        }
+    </style>
+    <script src="JavaScript/userAccount.js"></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Logo -->
+        <img src="Asset\pictures\logo.png" alt="Logo" class="logo">
+        <h1>Sky Sentinel</h1>
+        <!-- Login button -->
+        <button class="open-button" onclick="openLoginForm()" style="font-family: 'Crang', sans-serif;">Login</button>
+        <!-- Sign Up button -->
+        <button class="open-button-register" onclick="openSignUpForm()" style="font-family: 'Crang', sans-serif;">Sign Up</button>
+        <!-- Leaderboards link -->
+        <a href="HTML\Leaderboards.html" class="open-button-leaderboards" style="font-family: 'Crang', sans-serif; text-decoration: none;">Leaderboards</a>
+    </header>
+
+    <!-- Login Popup -->
+    <div class="login-popup" id="login">
+        <form action="/action_page.php" class="form-container" onsubmit="return handleLogin()">
+            <div style="text-align: center;">
+                <h1>Login</h1>
+            </div>
+            <div>
+                <label for="email"><b>Email</b></label>
+            </div>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+        </form>
+    </div>
+
+    <!-- Sign Up Popup -->
+    <div class="signup-popup" id="signup">
+        <form action="/action_page.php" class="form-container" onsubmit="return handleSignUp()">
+            <div style="text-align: center;">
+                <h1>Sign Up</h1>
+            </div>
+            <div>
+                <label for="name"><b>Name</b></label>
+            </div>
+            <input type="text" placeholder="Enter Full Name" name="name" required>
+
+            <!-- Add Username Field -->
+            <div>
+                <label for="username"><b>Username</b></label>
+            </div>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <div>
+                <label for="email"><b>Email</b></label>
+            </div>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <div>
+                <label for="psw"><b>Password</b></label>
+            </div>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="btn">Sign Up</button>
+            <button type="button" class="btn cancel" onclick="closeSignUpForm()">Close</button>
+        </form>
+    </div>
+
+
+    <!-- Main content section -->
+    <div class="context">
+        <!-- Game description -->
+        <h5 style="font-size: 24px; font-family: Crang;">
+            In a harrowing turn of events, an international coalition has assigned
+            the world's most skilled pilot, renowned for unmatched expertise, to thwart
+            an imminent terrorist threat. Malevolent forces have seized control of multiple
+            planes with the sinister intent of crashing them into strategic targets within
+            the pilot's own country. Responding to the crisis, the clandestine unveiling of
+            a cutting-edge, hidden aircraft, impervious to damage and equipped with a slowly
+            regenerating arsenal, has been initiated. The fate of countless lives now rests
+            on the shoulders of this unparalleled aviator as they embark on a high-stakes
+            mission to intercept and neutralize the hijacked planes, becoming the last line
+            of defense against an unthinkable catastrophe.
+        </h5>
+    </div>
+
+    <!-- Play button link -->
+    <a href="./HTML/Game%20Window.html" id="playButton" class="start-btn" style="text-decoration: none; font-size: 4rem; font-family: Crang;">Play</a>
+
+    <!-- Background circles for design -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Logo in the footer -->
+        <img src="Asset\pictures\logo.png" alt="Logo" class="logo-footer">
+        <h1 class="footer-name">Sky Sentinel</h1>
+        <!-- Login button in the footer -->
+        <button class="open-button-footer" onclick="openLoginForm()" style="font-family: 'Crang', sans-serif;">Login</button>
+        <!-- Sign Up button in the footer -->
+        <button class="open-button-register-footer" onclick="openSignUpForm()" style="font-family: 'Crang', sans-serif;">Sign Up</button>
+        <!-- Leaderboards link in the footer -->
+        <a href="./HTML/Leaderboards.html" class="open-button-leaderboards-footer" style="font-family: 'Crang', sans-serif; text-decoration: none;">Leaderboards</a>
+        
+        <!-- Social media icons in the footer -->
+        <div class="image-container">
+            <a href="https://www.instagram.com">
+                <img src="Asset\pictures\insta.png" alt="Instagram" class="insta-image">
+            </a>
+            <a href="https://www.facebook.com">
+                <img src="Asset\pictures\Fb.png" alt="Facebook" class="fb-image">
+            </a>
+            <a href="https://www.youtube.com">
+                <img src="Asset\pictures\YT.png" alt="Youtube" class="yt-image">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
